@@ -220,4 +220,17 @@ $dompdf = new Dompdf($options);
 $dompdf->loadHtml('hello world');
 $content_html=file_get_contents('content.txt');
 
+$dompdf->loadHtml($content_html);
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+//$dompdf->stream();
+$output = $dompdf->output();
+file_put_contents('filename.pdf', $output);
+
 ```
