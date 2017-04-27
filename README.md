@@ -204,7 +204,7 @@ See [Dompdf\Options](src/Options.php) for a list of available options.
 
 *If you find this project useful, please consider making a donation. Any funds donated will be used to help further development on this project.)*
 
-
+```php
 //Setting load font, and image
 use Dompdf\Options;
 
@@ -219,3 +219,5 @@ $dompdf = new Dompdf($options);
 
 $dompdf->loadHtml('hello world');
 $content_html=file_get_contents('content.txt');
+
+```
