@@ -202,6 +202,20 @@ See [Dompdf\Options](src/Options.php) for a list of available options.
 
 ---
 
-[![Donate button](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)](http://goo.gl/DSvWf)
-
 *If you find this project useful, please consider making a donation. Any funds donated will be used to help further development on this project.)*
+
+
+//Setting load font, and image
+use Dompdf\Options;
+
+$options = new Options();
+$options->set('defaultFont', 'Courier');
+$options->set('isRemoteEnabled', TRUE);
+$options->set('debugKeepTemp', TRUE);
+$options->set('isHtml5ParserEnabled', true);
+$dompdf = new Dompdf($options);
+
+/*
+
+$dompdf->loadHtml('hello world');
+$content_html=file_get_contents('content.txt');
